@@ -7,7 +7,7 @@ import { NyloteumLogo } from '../components/NyloteumLogo';
 // ============================================================================
 // FOUNDER CONFIGURATION CONSTANTS — Paste your live validation links below
 // ============================================================================
-const GOOGLE_FORMS_URL = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
+const GOOGLE_FORMS_URL = 'https://forms.gle/P9Kvqr3ahvyL7Xd58';
 const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/nyloteum';
 
 const FOUNDER_CONTACTS = {
