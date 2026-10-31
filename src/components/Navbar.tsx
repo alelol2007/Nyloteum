@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
   return (
     <header className="topbar">
       <nav
-        className="wrap flex h-[76px] items-center justify-between max-[620px]:h-[66px]"
+        className="wrap flex h-[82px] items-center justify-between max-[620px]:h-[70px]"
         aria-label="Main navigation"
       >
         <Link
@@ -35,16 +35,16 @@ export const Navbar: React.FC = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Nyloteum home"
         >
-          <NyloteumLogo />
+          <NyloteumLogo size="nav" />
         </Link>
 
-        <div className="flex items-center gap-[32px] text-[13px] font-semibold text-[#536b65] max-[768px]:gap-4">
+        <div className="flex items-center gap-[32px] text-[13px] font-semibold text-[#6c6858] max-[768px]:gap-4">
           {NAV_LINKS.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={(e) => handleAnchorClick(e, item.href)}
-              className="hidden transition-colors hover:text-[#0d6457] md:inline-block"
+              className="hidden transition-colors hover:text-[#ab8742] md:inline-block"
             >
               {item.label}
             </a>
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
-            className="grid h-9 w-9 place-items-center rounded-full border border-[#173a36]/12 text-[#173a36] md:hidden"
+            className="grid h-9 w-9 place-items-center rounded-full border border-[#ab8742]/35 text-[#414b3b] md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -71,14 +71,14 @@ export const Navbar: React.FC = () => {
       </nav>
 
       {mobileOpen && (
-        <div className="border-t border-[#173a36]/8 bg-[#f5f7ef] py-3 md:hidden">
+        <div className="border-t border-[#ab8742]/20 bg-[#fbf7ee] py-3 md:hidden">
           <div className="wrap flex flex-col gap-1">
             {NAV_LINKS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleAnchorClick(e, item.href)}
-                className="py-2.5 text-[14px] font-semibold text-[#173a36] hover:text-[#0d6457]"
+                className="py-2.5 text-[14px] font-semibold text-[#414b3b] hover:text-[#ab8742]"
               >
                 {item.label}
               </a>

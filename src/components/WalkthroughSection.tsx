@@ -58,7 +58,7 @@ const STEPS = [
     num: '02',
     title: 'Snap any tag in-store',
     desc: 'Walk into any shop with Nyloteum open, photograph the inner composition label, and let our textile database inspect the exact blend.',
-    tag: '1 credit = 1 scan',
+    tag: '5 free/wk · 5 tokens = €1',
   },
   {
     num: '03',
@@ -114,8 +114,8 @@ export const WalkthroughSection: React.FC = () => {
 
   return (
     <>
-      {/* SECTION 1: .how (White 4-Card Step Grid) */}
-      <section id="how" className="bg-[#fffefa] py-[100px] max-[620px]:py-[76px]">
+      {/* SECTION 1: .how (Warm Paper 4-Card Step Grid) */}
+      <section id="how" className="bg-[#fffdfa] py-[100px] max-[620px]:py-[76px]">
         <div className="wrap">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -128,8 +128,10 @@ export const WalkthroughSection: React.FC = () => {
               <span className="dot" />
               <span>How Nyloteum works</span>
             </div>
-            <h2 className="section-h2">From fitting room to decade-long favorite.</h2>
-            <p className="mx-auto max-w-[560px] text-[15px] leading-[1.75] text-[#647773]">
+            <h2 className="section-h2 text-[#414b3b]">
+              From fitting room to decade-long favorite.
+            </h2>
+            <p className="mx-auto max-w-[560px] text-[15px] leading-[1.75] text-[#6c6858]">
               Set your preferences once, snap any clothing tag while you shop, and know in seconds whether a piece truly deserves a place in your closet.
             </p>
           </motion.div>
@@ -146,22 +148,22 @@ export const WalkthroughSection: React.FC = () => {
                   delay: idx * 0.09,
                   ease: [0.2, 0.7, 0.2, 1],
                 }}
-                className="relative flex min-h-[265px] flex-col justify-between rounded-[18px] border border-[#173a36]/12 bg-white px-[22px] py-[25px] transition-all duration-250 hover:-translate-y-[5px] hover:shadow-[0_24px_70px_rgba(14,63,54,0.12)] max-[620px]:min-h-0"
+                className="relative flex min-h-[265px] flex-col justify-between rounded-[18px] border border-[#ab8742]/24 bg-[#fbf7ee] px-[22px] py-[25px] transition-all duration-250 hover:-translate-y-[5px] hover:border-[#ab8742]/60 hover:shadow-[0_24px_70px_rgba(171,135,66,0.16)] max-[620px]:min-h-0"
               >
                 <div>
-                  <span className="mb-[26px] grid h-[36px] w-[36px] place-items-center rounded-[12px] bg-[#edf2df] font-['Manrope'] text-[13px] font-extrabold text-[#0d6457]">
+                  <span className="mb-[26px] grid h-[36px] w-[36px] place-items-center rounded-[12px] bg-[#ab8742] font-['Manrope'] text-[13px] font-extrabold text-[#fffdfa]">
                     {s.num}
                   </span>
-                  <h3 className="mb-[10px] text-[16px] font-bold tracking-[-0.4px] text-[#173a36]">
+                  <h3 className="mb-[10px] text-[16px] font-bold tracking-[-0.4px] text-[#414b3b]">
                     {s.title}
                   </h3>
-                  <p className="m-0 text-[12.5px] leading-[1.75] text-[#647773]">
+                  <p className="m-0 text-[12.5px] leading-[1.75] text-[#6c6858]">
                     {s.desc}
                   </p>
                 </div>
 
                 <div>
-                  <span className="mt-[18px] inline-block rounded-full bg-[#edf2df] px-[10px] py-[6px] text-[9.5px] font-bold text-[#0d6457]">
+                  <span className="mt-[18px] inline-block rounded-full bg-[#ab8742]/18 px-[10px] py-[6px] text-[9.5px] font-bold text-[#7d5f28]">
                     {s.tag}
                   </span>
                 </div>
@@ -171,13 +173,13 @@ export const WalkthroughSection: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 2: .insight (Cream Interactive Profile & Material Assessment Split) */}
+      {/* SECTION 2: .insight (Warm Cream Interactive Profile & Material Assessment Split) */}
       <section
         id="personalize"
-        className="overflow-hidden bg-[#f5f7ef] py-[100px] max-[620px]:py-[76px]"
+        className="overflow-hidden bg-[#fbf7ee] py-[100px] max-[620px]:py-[76px]"
       >
         <div className="wrap grid grid-cols-1 items-center gap-[70px] max-[900px]:gap-[38px] lg:grid-cols-[0.92fr_1.08fr]">
-          {/* Left Visual: Flat #e5ebd3 Circle + Clean Insight Card */}
+          {/* Left Visual: Warm Gold Circle + Clean Insight Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -187,16 +189,16 @@ export const WalkthroughSection: React.FC = () => {
           >
             <div
               aria-hidden="true"
-              className="absolute h-[325px] w-[325px] rounded-full bg-[#e5ebd3] max-[620px]:h-[285px] max-[620px]:w-[285px]"
+              className="absolute h-[325px] w-[325px] rounded-full bg-[#ab8742]/24 max-[620px]:h-[285px] max-[620px]:w-[285px]"
             />
 
-            <div className="relative z-[1] w-[min(375px,92%)] rounded-[20px] border border-[#173a36]/10 bg-[#fffefa] p-[26px] shadow-[0_24px_70px_rgba(14,63,54,0.12)]">
+            <div className="relative z-[1] w-[min(375px,92%)] rounded-[20px] border border-[#ab8742]/25 bg-[#fffdfa] p-[26px] shadow-[0_24px_70px_rgba(138,106,48,0.15)]">
               <div className="eyebrow mb-[11px] !text-[9.5px]">
                 <span className="dot" />
                 <span>{activeData.eyebrow}</span>
               </div>
 
-              <h3 className="mb-[15px] text-[19px] leading-snug font-bold tracking-[-0.4px] text-[#173a36]">
+              <h3 className="mb-[15px] text-[19px] leading-snug font-bold tracking-[-0.4px] text-[#414b3b]">
                 {activeData.piece}
               </h3>
 
@@ -204,14 +206,14 @@ export const WalkthroughSection: React.FC = () => {
                 {activeData.scores.map((row) => (
                   <div
                     key={row.label}
-                    className="flex items-center justify-between gap-2 border-t border-[#173a36]/12 py-[11.5px] text-[11.5px]"
+                    className="flex items-center justify-between gap-2 border-t border-[#ab8742]/18 py-[11.5px] text-[11.5px]"
                   >
-                    <span className="text-[#173a36]">{row.label}</span>
+                    <span className="text-[#414b3b]">{row.label}</span>
                     <span
                       className={`shrink-0 rounded-full px-[9px] py-[4px] text-[9.5px] font-bold ${
                         row.good
-                          ? 'bg-[#eaf1dd] text-[#0d6457]'
-                          : 'bg-[#f5ebe6] text-[#855b49]'
+                          ? 'bg-[#8ca87b]/28 text-[#414b3b]'
+                          : 'bg-[#ab8742]/22 text-[#7d5f28]'
                       }`}
                     >
                       {row.badge}
@@ -220,7 +222,7 @@ export const WalkthroughSection: React.FC = () => {
                 ))}
               </div>
 
-              <p className="mt-[12px] mb-0 text-[11px] leading-[1.65] text-[#647773]">
+              <p className="mt-[12px] mb-0 text-[11px] leading-[1.65] text-[#6c6858]">
                 {activeData.summary}
               </p>
             </div>
@@ -239,11 +241,11 @@ export const WalkthroughSection: React.FC = () => {
               <span>Tailored to you</span>
             </div>
 
-            <h2 className="section-h2">
+            <h2 className="section-h2 text-[#414b3b]">
               Quick presets when you’re in a rush. Deep filters when skin or sport demands it.
             </h2>
 
-            <p className="mb-[20px] text-[14.5px] leading-[1.85] text-[#647773]">
+            <p className="mb-[20px] text-[14.5px] leading-[1.85] text-[#6c6858]">
               A trail jacket, a gym tee, and an everyday sweater shouldn’t be judged by the same yardstick. Try switching profiles below to see how Nyloteum adapts its material assessment:
             </p>
 
@@ -263,8 +265,8 @@ export const WalkthroughSection: React.FC = () => {
                   onClick={() => setProfile(tab.id)}
                   className={`cursor-pointer rounded-full px-[15px] py-[9px] text-[12px] font-bold transition-all ${
                     profile === tab.id
-                      ? 'bg-[#0d6457] text-white shadow-[0_8px_20px_rgba(13,100,87,0.18)]'
-                      : 'border border-[#173a36]/12 bg-[#fffefa] text-[#536b65] hover:border-[#0d6457]/40 hover:text-[#173a36]'
+                      ? 'bg-[#ab8742] text-[#fffdfa] shadow-[0_8px_20px_rgba(171,135,66,0.28)]'
+                      : 'border border-[#ab8742]/28 bg-[#fffdfa] text-[#6c6858] hover:border-[#ab8742] hover:text-[#414b3b]'
                   }`}
                 >
                   {tab.label}
@@ -272,11 +274,11 @@ export const WalkthroughSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Expandable Custom Preferences Panel when "Other · Custom needs" is active */}
+            {/* Expandable Custom Preferences Panel */}
             {profile === 'custom' && (
-              <div className="mb-[22px] grid gap-[11px] rounded-[16px] border border-[#173a36]/12 bg-[#fffefa] p-[18px] text-[12px]">
+              <div className="mb-[22px] grid gap-[11px] rounded-[16px] border border-[#ab8742]/25 bg-[#fffdfa] p-[18px] text-[12px]">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="font-semibold text-[#173a36]">Natural materials only</span>
+                  <span className="font-semibold text-[#414b3b]">Natural materials only</span>
                   <div className="flex gap-[6px]">
                     {[true, false].map((val) => (
                       <button
@@ -285,8 +287,8 @@ export const WalkthroughSection: React.FC = () => {
                         onClick={() => setNaturalOnly(val)}
                         className={`cursor-pointer rounded-full px-[11px] py-[4px] text-[11px] font-bold ${
                           naturalOnly === val
-                            ? 'bg-[#0d6457] text-white'
-                            : 'bg-[#edf2df] text-[#536b65]'
+                            ? 'bg-[#ab8742] text-[#fffdfa]'
+                            : 'bg-[#f3ead7] text-[#414b3b]'
                         }`}
                       >
                         {val ? 'Yes, 100% natural' : 'Allow technical blends'}
@@ -295,8 +297,8 @@ export const WalkthroughSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[#173a36]/8 pt-[10px]">
-                  <span className="font-semibold text-[#173a36]">Fit & cut preference</span>
+                <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[#ab8742]/16 pt-[10px]">
+                  <span className="font-semibold text-[#414b3b]">Fit & cut preference</span>
                   <div className="flex gap-[6px]">
                     {(['Close-fit', 'Loose'] as const).map((f) => (
                       <button
@@ -305,8 +307,8 @@ export const WalkthroughSection: React.FC = () => {
                         onClick={() => setFit(f)}
                         className={`cursor-pointer rounded-full px-[11px] py-[4px] text-[11px] font-bold ${
                           fit === f
-                            ? 'bg-[#0d6457] text-white'
-                            : 'bg-[#edf2df] text-[#536b65]'
+                            ? 'bg-[#ab8742] text-[#fffdfa]'
+                            : 'bg-[#f3ead7] text-[#414b3b]'
                         }`}
                       >
                         {f}
@@ -315,8 +317,8 @@ export const WalkthroughSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[#173a36]/8 pt-[10px]">
-                  <span className="font-semibold text-[#173a36]">Allergies to avoid</span>
+                <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[#ab8742]/16 pt-[10px]">
+                  <span className="font-semibold text-[#414b3b]">Allergies to avoid</span>
                   <div className="flex flex-wrap gap-[6px]">
                     {(['Coarse wool', 'Synthetic dyes', 'Elastane'] as const).map((al) => (
                       <button
@@ -325,8 +327,8 @@ export const WalkthroughSection: React.FC = () => {
                         onClick={() => setAllergy(al)}
                         className={`cursor-pointer rounded-full px-[11px] py-[4px] text-[11px] font-bold ${
                           allergy === al
-                            ? 'bg-[#855b49] text-white'
-                            : 'bg-[#f5ebe6] text-[#855b49]'
+                            ? 'bg-[#414b3b] text-[#fffdfa]'
+                            : 'bg-[#f3ead7] text-[#414b3b]'
                         }`}
                       >
                         {al}
@@ -335,8 +337,8 @@ export const WalkthroughSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[#173a36]/8 pt-[10px]">
-                  <span className="font-semibold text-[#173a36]">Sport & aesthetic</span>
+                <div className="flex flex-wrap items-center justify-between gap-2 border-t border-[#ab8742]/16 pt-[10px]">
+                  <span className="font-semibold text-[#414b3b]">Sport & aesthetic</span>
                   <div className="flex flex-wrap gap-[6px]">
                     {(['Everyday', 'Active', 'Intense'] as const).map((sp) => (
                       <button
@@ -345,8 +347,8 @@ export const WalkthroughSection: React.FC = () => {
                         onClick={() => setSportLevel(sp)}
                         className={`cursor-pointer rounded-full px-[10px] py-[4px] text-[10.5px] font-bold ${
                           sportLevel === sp
-                            ? 'bg-[#022e4d] text-white'
-                            : 'bg-[#b6e6fa]/45 text-[#022e4d]'
+                            ? 'bg-[#ab8742] text-[#fffdfa]'
+                            : 'bg-[#f3ead7] text-[#414b3b]'
                         }`}
                       >
                         {sp}
@@ -359,8 +361,8 @@ export const WalkthroughSection: React.FC = () => {
                         onClick={() => setAesthetic(ae)}
                         className={`cursor-pointer rounded-full px-[10px] py-[4px] text-[10.5px] font-bold ${
                           aesthetic === ae
-                            ? 'bg-[#0d6457] text-white'
-                            : 'bg-[#edf2df] text-[#536b65]'
+                            ? 'bg-[#414b3b] text-[#fffdfa]'
+                            : 'bg-[#8ca87b]/25 text-[#414b3b]'
                         }`}
                       >
                         {ae}
@@ -371,10 +373,10 @@ export const WalkthroughSection: React.FC = () => {
               </div>
             )}
 
-            {/* Reference .check-list */}
-            <ul className="m-0 grid list-none gap-[13px] p-0 text-[12.5px] text-[#49645c]">
+            {/* Check-list */}
+            <ul className="m-0 grid list-none gap-[13px] p-0 text-[12.5px] text-[#414b3b]">
               <li className="flex items-center gap-[10px]">
-                <span className="grid h-[19px] w-[19px] shrink-0 place-items-center rounded-full bg-[#e6edcf] text-[11px] font-bold text-[#0d6457]">
+                <span className="grid h-[19px] w-[19px] shrink-0 place-items-center rounded-full bg-[#ab8742]/24 text-[11px] font-bold text-[#7d5f28]">
                   ✓
                 </span>
                 <span>
@@ -382,7 +384,7 @@ export const WalkthroughSection: React.FC = () => {
                 </span>
               </li>
               <li className="flex items-center gap-[10px]">
-                <span className="grid h-[19px] w-[19px] shrink-0 place-items-center rounded-full bg-[#e6edcf] text-[11px] font-bold text-[#0d6457]">
+                <span className="grid h-[19px] w-[19px] shrink-0 place-items-center rounded-full bg-[#ab8742]/24 text-[11px] font-bold text-[#7d5f28]">
                   ✓
                 </span>
                 <span>
@@ -390,7 +392,7 @@ export const WalkthroughSection: React.FC = () => {
                 </span>
               </li>
               <li className="flex items-center gap-[10px]">
-                <span className="grid h-[19px] w-[19px] shrink-0 place-items-center rounded-full bg-[#e6edcf] text-[11px] font-bold text-[#0d6457]">
+                <span className="grid h-[19px] w-[19px] shrink-0 place-items-center rounded-full bg-[#ab8742]/24 text-[11px] font-bold text-[#7d5f28]">
                   ✓
                 </span>
                 <span>

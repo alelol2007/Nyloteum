@@ -2,18 +2,17 @@
 @config "../tailwind.config.ts";
 
 :root {
-  --ink: #173a36;
-  --muted: #647773;
-  --green: #0d6457;
-  --green-dark: #084b44;
-  --lime: #9bba4f;
-  --cream: #f5f7ef;
-  --white: #fffefa;
-  --blue: #022e4d;
-  --sky: #b6e6fa;
-  --clay: #855b49;
-  --line: rgba(23, 58, 54, 0.12);
-  --shadow: 0 24px 70px rgba(14, 63, 54, 0.12);
+  --ink: #414b3b;
+  --muted: #6c6858;
+  --gold: #ab8742;
+  --gold-dark: #927134;
+  --wheat: #f3ead7;
+  --olive: #414b3b;
+  --sage: #8ca87b;
+  --cream: #fbf7ee;
+  --white: #fffdfa;
+  --line: rgba(171, 135, 66, 0.22);
+  --shadow: 0 24px 70px rgba(138, 106, 48, 0.14);
 }
 
 @layer base {
@@ -23,7 +22,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 88px;
+    scroll-padding-top: 92px;
   }
 
   body {
@@ -61,15 +60,15 @@
   position: sticky;
   z-index: 30;
   top: 0;
-  border-bottom: 1px solid rgba(23, 58, 54, 0.08);
-  background: #f5f7ef;
+  border-bottom: 1px solid rgba(171, 135, 66, 0.2);
+  background: #fbf7ee;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--green);
+  color: #927134;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.3px;
@@ -80,8 +79,8 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--lime);
-  box-shadow: 0 0 0 4px rgba(155, 186, 79, 0.17);
+  background: #ab8742;
+  box-shadow: 0 0 0 4px rgba(171, 135, 66, 0.24);
 }
 
 .nylo-btn {
@@ -92,8 +91,8 @@
   border: 0;
   border-radius: 999px;
   padding: 13px 22px;
-  color: #ffffff;
-  background: var(--green);
+  color: #fffdfa;
+  background: #ab8742;
   font-size: 13px;
   font-weight: 700;
   transition: transform 0.2s, background 0.2s, box-shadow 0.2s, color 0.2s;
@@ -101,20 +100,21 @@
 }
 
 .nylo-btn:hover {
-  background: var(--green-dark);
+  background: #927134;
   transform: translateY(-2px);
-  box-shadow: 0 9px 22px rgba(8, 75, 68, 0.18);
+  box-shadow: 0 9px 22px rgba(171, 135, 66, 0.3);
 }
 
 .nylo-btn-outline {
-  border: 1px solid var(--line);
-  color: var(--green);
+  border: 1.5px solid rgba(171, 135, 66, 0.45);
+  color: #414b3b;
   background: transparent;
 }
 
 .nylo-btn-outline:hover {
-  color: #ffffff;
-  background: var(--green);
+  color: #fffdfa;
+  border-color: #ab8742;
+  background: #ab8742;
 }
 
 .hero-section {
@@ -126,12 +126,12 @@
 .hero-section::before {
   position: absolute;
   content: '';
-  width: 560px;
-  height: 560px;
-  top: -230px;
-  right: -130px;
+  width: 580px;
+  height: 580px;
+  top: -220px;
+  right: -120px;
   border-radius: 50%;
-  background: rgba(182, 230, 250, 0.42);
+  background: rgba(171, 135, 66, 0.17);
   pointer-events: none;
 }
 

@@ -3,18 +3,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#173a36',
-        muted: '#647773',
-        green: {
-          DEFAULT: '#0d6457',
-          dark: '#084b44',
+        gold: {
+          DEFAULT: '#ab8742',
+          dark: '#927134',
+          soft: '#f3ead7',
         },
-        lime: '#9bba4f',
-        cream: '#f5f7ef',
-        paper: '#fffefa',
-        blue: '#022e4d',
-        sky: '#b6e6fa',
-        clay: '#855b49',
+        olive: {
+          DEFAULT: '#414b3b',
+          dark: '#2f372b',
+        },
+        sage: '#8ca87b',
+        cream: '#fbf7ee',
+        paper: '#fffdfa',
       },
       fontFamily: {
         sans: ['"DM Sans"', 'sans-serif'],
