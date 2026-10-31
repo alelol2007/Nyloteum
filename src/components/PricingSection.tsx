@@ -64,10 +64,10 @@ export const PricingSection: React.FC = () => {
 
   return (
     <>
-      {/* .pricing section */}
+      {/* .pricing section (Cozy Warm Oat-Sage Surface) */}
       <section
         id="pricing"
-        className="bg-[#fbf7ee] pt-[100px] pb-[40px] max-[620px]:pt-[76px]"
+        className="bg-[#f2efe4] pt-[100px] pb-[40px] max-[620px]:pt-[76px]"
       >
         <div className="wrap">
           <motion.div
@@ -84,7 +84,7 @@ export const PricingSection: React.FC = () => {
             <h2 className="section-h2 text-[#414b3b]">
               Start free every week. Top up 5 tokens for €1.
             </h2>
-            <p className="mx-auto max-w-[560px] text-[15px] leading-[1.75] text-[#6c6858]">
+            <p className="mx-auto max-w-[560px] text-[15px] leading-[1.75] text-[#626759]">
               Every account gets 5 free scans per week plus 1 week of Premium to try it out. Need extra scans in the fitting room? Grab 5 tokens for €1, or go unlimited.
             </p>
           </motion.div>
@@ -101,14 +101,14 @@ export const PricingSection: React.FC = () => {
                   delay: idx * 0.1,
                   ease: [0.2, 0.7, 0.2, 1],
                 }}
-                className={`relative flex flex-col rounded-[20px] p-[30px] max-[620px]:p-[27px] ${
+                className={`relative flex flex-col rounded-[20px] bg-[#fffdf8] p-[30px] max-[620px]:p-[27px] ${
                   plan.popular
-                    ? 'border-2 border-[#ab8742] bg-[#fffdfa] shadow-[0_20px_55px_rgba(171,135,66,0.2)] max-[620px]:mt-[7px]'
-                    : 'border border-[#ab8742]/24 bg-[#fffdfa]'
+                    ? 'border-2 border-[#ab8742] shadow-[0_20px_55px_rgba(171,135,66,0.18)] max-[620px]:mt-[7px]'
+                    : 'border border-[#414b3b]/15'
                 }`}
               >
                 {plan.popular && (
-                  <span className="absolute top-[-13px] left-1/2 -translate-x-1/2 rounded-full bg-[#ab8742] px-[14px] py-[7px] text-[9px] font-extrabold tracking-[0.8px] whitespace-nowrap text-[#fffdfa] uppercase">
+                  <span className="absolute top-[-13px] left-1/2 -translate-x-1/2 rounded-full bg-[#ab8742] px-[14px] py-[7px] text-[9px] font-extrabold tracking-[0.8px] whitespace-nowrap text-[#fffdf8] uppercase">
                     Most popular · 5 tokens = €1
                   </span>
                 )}
@@ -116,13 +116,13 @@ export const PricingSection: React.FC = () => {
                 <div className="mb-[7px] font-['Manrope'] text-[17px] font-bold text-[#414b3b]">
                   {plan.name}
                 </div>
-                <p className="mb-[22px] min-h-[36px] text-[12.5px] leading-[1.6] text-[#6c6858]">
+                <p className="mb-[22px] min-h-[36px] text-[12.5px] leading-[1.6] text-[#626759]">
                   {plan.desc}
                 </p>
 
                 <div className="mb-[4px] font-['Manrope'] text-[42px] font-extrabold tracking-[-2px] text-[#414b3b]">
                   {plan.price}{' '}
-                  <small className="font-['DM_Sans'] text-[13px] font-medium tracking-normal text-[#6c6858]">
+                  <small className="font-['DM_Sans'] text-[13px] font-medium tracking-normal text-[#626759]">
                     {plan.unit}
                   </small>
                 </div>
@@ -131,12 +131,12 @@ export const PricingSection: React.FC = () => {
                   {plan.tokenNote}
                 </div>
 
-                <div className="mb-[20px] h-[1px] bg-[#ab8742]/20" />
+                <div className="mb-[20px] h-[1px] bg-[#414b3b]/12" />
 
                 <ul className="m-0 mb-[28px] grid list-none gap-[13px] p-0 text-[12px] text-[#414b3b]/90">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-center gap-[9px]">
-                      <span className="grid h-[17px] w-[17px] shrink-0 place-items-center rounded-full bg-[#ab8742]/22 text-[10px] font-bold text-[#7d5f28]">
+                      <span className="grid h-[17px] w-[17px] shrink-0 place-items-center rounded-full bg-[#8ca87b]/32 text-[10px] font-bold text-[#414b3b]">
                         ✓
                       </span>
                       <span>{f}</span>
@@ -148,7 +148,9 @@ export const PricingSection: React.FC = () => {
                   type="button"
                   onClick={() => goToEarlyAccess(plan.stateLabel)}
                   className={`nylo-btn mt-auto w-full !py-[12px] ${
-                    plan.outline ? 'nylo-btn-outline' : ''
+                    plan.outline
+                      ? 'nylo-btn-outline'
+                      : '!bg-[#ab8742] hover:!bg-[#927134]'
                   }`}
                 >
                   {plan.cta}
@@ -157,31 +159,31 @@ export const PricingSection: React.FC = () => {
             ))}
           </div>
 
-          <p className="mt-[25px] mb-0 text-center text-[11.5px] text-[#6c6858]">
+          <p className="mt-[25px] mb-0 text-center text-[11.5px] text-[#626759]">
             Includes 5 free scans every week, a 1-week Premium trial, care icon guide & community feed. Purchased tokens never expire.
           </p>
         </div>
       </section>
 
-      {/* .launch section (Warm Gold/Ochre #ab8742 Banner) */}
-      <section id="launch" className="bg-[#fbf7ee] pt-[24px] pb-[84px] max-[620px]:pb-[65px]">
+      {/* .launch section (Warm Gold/Ochre #ab8742 Banner + Woodland Green #414b3b Button) */}
+      <section id="launch" className="bg-[#f2efe4] pt-[24px] pb-[84px] max-[620px]:pb-[65px]">
         <div className="wrap">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: [0.2, 0.7, 0.2, 1] }}
-            className="grid grid-cols-1 items-center gap-[30px] rounded-[22px] bg-[#ab8742] px-[43px] py-[37px] text-[#fffdfa] shadow-[0_24px_60px_rgba(171,135,66,0.25)] max-[800px]:text-center max-[620px]:px-[22px] max-[620px]:py-[32px] lg:grid-cols-[1fr_auto]"
+            className="grid grid-cols-1 items-center gap-[30px] rounded-[22px] bg-[#ab8742] px-[43px] py-[37px] text-[#fffdf8] shadow-[0_24px_60px_rgba(171,135,66,0.2)] max-[800px]:text-center max-[620px]:px-[22px] max-[620px]:py-[32px] lg:grid-cols-[1fr_auto]"
           >
             <div>
-              <div className="eyebrow mb-[12px] !text-[#fffdfa]">
+              <div className="eyebrow mb-[12px] !text-[#fffdf8]">
                 <span className="h-[7px] w-[7px] rounded-full bg-[#414b3b] shadow-[0_0_0_4px_rgba(65,75,59,0.22)]" />
                 <span>Buy once, stay forever</span>
               </div>
               <h2 className="mb-[9px] font-['Manrope'] text-[31px] leading-[1.15] font-bold tracking-[-1.2px] max-[620px]:text-[26px]">
                 Make your next piece one worth keeping.
               </h2>
-              <p className="m-0 max-w-[660px] text-[13.5px] leading-[1.7] font-medium text-[#fffdfa]/92 max-[800px]:mx-auto">
+              <p className="m-0 max-w-[660px] text-[13.5px] leading-[1.7] font-medium text-[#fffdf8]/92 max-[800px]:mx-auto">
                 Join shoppers, hikers, and athletes replacing fast-fashion guesswork with calm, science-backed wardrobe choices.
               </p>
             </div>
@@ -189,10 +191,10 @@ export const PricingSection: React.FC = () => {
             <button
               type="button"
               onClick={() => goToEarlyAccess('Early Access App Download')}
-              className="nylo-btn justify-self-center !bg-[#414b3b] !text-[#fffdfa] whitespace-nowrap hover:!bg-[#2f372b]"
+              className="nylo-btn justify-self-center !bg-[#414b3b] !text-[#fffdf8] whitespace-nowrap hover:!bg-[#31392c]"
             >
               <span>Download Nyloteum</span>
-              <span aria-hidden="true" className="text-[#f3ead7]">↗</span>
+              <span aria-hidden="true" className="text-[#8ca87b]">↗</span>
             </button>
           </motion.div>
         </div>

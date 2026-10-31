@@ -3,18 +3,21 @@ export default {
   theme: {
     extend: {
       colors: {
+        olive: {
+          DEFAULT: '#414b3b',
+          dark: '#31392c',
+        },
         gold: {
           DEFAULT: '#ab8742',
           dark: '#927134',
-          soft: '#f3ead7',
         },
-        olive: {
-          DEFAULT: '#414b3b',
-          dark: '#2f372b',
+        sage: {
+          DEFAULT: '#8ca87b',
+          soft: '#e8ede1',
         },
-        sage: '#8ca87b',
-        cream: '#fbf7ee',
-        paper: '#fffdfa',
+        cream: '#faf6ee',
+        oat: '#f2efe4',
+        paper: '#fffdf8',
       },
       fontFamily: {
         sans: ['"DM Sans"', 'sans-serif'],

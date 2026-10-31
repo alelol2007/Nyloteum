@@ -40,8 +40,8 @@ const CARE_ICONS = [
       <svg viewBox="0 0 40 40" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="8" y="8" width="24" height="24" rx="3" />
         <circle cx="20" cy="20" r="8" />
-        <line x1="6" y1="6" x2="34" y2="34" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <line x1="34" y1="6" x2="6" y2="34" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="6" y1="6" x2="34" y2="34" stroke="#ab8742" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="34" y1="6" x2="6" y2="34" stroke="#ab8742" strokeWidth="2.2" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -65,8 +65,8 @@ const CARE_ICONS = [
     svg: (
       <svg viewBox="0 0 40 40" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
         <polygon points="20,8 33,31 7,31" strokeLinejoin="round" />
-        <line x1="9" y1="10" x2="31" y2="32" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <line x1="31" y1="10" x2="9" y2="32" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="9" y1="10" x2="31" y2="32" stroke="#ab8742" strokeWidth="2.2" strokeLinecap="round" />
+        <line x1="31" y1="10" x2="9" y2="32" stroke="#ab8742" strokeWidth="2.2" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -98,7 +98,7 @@ const FEED_POSTS = [
     note: 'Scanned in Munich before a Dolomites trip. 38 washes later: zero pilling under pack straps and zero skin itch.',
     likes: 184,
     comment: '@lukas_alpine: Bought this from Nyloteum’s swap list too—still looks brand new.',
-    tone: '#ab8742',
+    tone: '#414b3b',
   },
   {
     id: 'p2',
@@ -128,7 +128,7 @@ const FEED_POSTS = [
     note: 'Only gets softer every summer. Learning how to read flax weight saved me from flimsy high-street blends.',
     likes: 219,
     comment: '@marc.v: 245gsm linen drapes so cleanly without elbow bagging.',
-    tone: '#414b3b',
+    tone: '#ab8742',
   },
 ];
 
@@ -180,7 +180,7 @@ export const EcosystemTabsPreview: React.FC = () => {
   ];
 
   return (
-    <section id="learn" className="bg-[#f3ead7] py-[100px] text-[#414b3b] max-[620px]:py-[76px]">
+    <section id="learn" className="bg-[#414b3b] py-[100px] text-[#fffdf8] max-[620px]:py-[76px]">
       <div className="wrap grid grid-cols-1 items-center gap-[55px] max-[800px]:gap-[38px] lg:grid-cols-2">
         {/* Left Column */}
         <motion.div
@@ -189,16 +189,16 @@ export const EcosystemTabsPreview: React.FC = () => {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.65, ease: [0.2, 0.7, 0.2, 1] }}
         >
-          <div className="eyebrow mb-[14px]">
+          <div className="eyebrow mb-[14px] !text-[#e2c285]">
             <span className="dot" />
             <span>Four-tab app ecosystem</span>
           </div>
 
-          <h2 className="section-h2 max-w-[460px] text-[#414b3b]">
+          <h2 className="section-h2 max-w-[460px] text-[#fffdf8]">
             More than a scanner. A calmer way to buy and care.
           </h2>
 
-          <p className="mb-[28px] max-w-[490px] text-[14px] leading-[1.85] text-[#6c6858]">
+          <p className="mb-[28px] max-w-[490px] text-[14px] leading-[1.85] text-[#d6e1cd]">
             Customers trust Nyloteum because we never hide behind a mystery score. Select any tab below to preview how scanning, care literacy, and community reviews work together.
           </p>
 
@@ -215,32 +215,24 @@ export const EcosystemTabsPreview: React.FC = () => {
                     onClick={() => setActiveTab(item.id)}
                     className={`flex w-full cursor-pointer items-start gap-[13px] rounded-[14px] border p-[17px] text-left transition-all duration-200 ${
                       active
-                        ? 'border-[#ab8742] bg-[#ab8742] text-[#fffdfa] shadow-[0_14px_34px_rgba(171,135,66,0.28)]'
-                        : 'border-[#ab8742]/24 bg-[#fffdfa] text-[#414b3b] hover:border-[#ab8742]/60'
+                        ? 'border-[#ab8742] bg-[#ab8742]/22 shadow-[0_12px_30px_rgba(0,0,0,0.16)]'
+                        : 'border-[#8ca87b]/22 bg-[#fffdf8]/6 hover:border-[#ab8742]/45 hover:bg-[#fffdf8]/10'
                     }`}
                   >
                     <span
                       className={`grid h-[34px] w-[34px] shrink-0 place-items-center rounded-[11px] transition-colors ${
                         active
-                          ? 'bg-[#fffdfa]/22 text-[#fffdfa]'
-                          : 'bg-[#ab8742]/18 text-[#ab8742]'
+                          ? 'bg-[#ab8742] text-[#fffdf8]'
+                          : 'bg-[#8ca87b] text-[#414b3b]'
                       }`}
                     >
                       <Icon className="h-[16px] w-[16px]" />
                     </span>
                     <span>
-                      <strong
-                        className={`mt-[1px] mb-[4px] block font-['Manrope'] text-[13px] font-bold ${
-                          active ? 'text-[#fffdfa]' : 'text-[#414b3b]'
-                        }`}
-                      >
+                      <strong className="mt-[1px] mb-[4px] block font-['Manrope'] text-[13px] font-bold text-[#fffdf8]">
                         {item.title}
                       </strong>
-                      <span
-                        className={`block text-[11.5px] leading-[1.6] ${
-                          active ? 'text-[#fffdfa]/92' : 'text-[#6c6858]'
-                        }`}
-                      >
+                      <span className="block text-[11.5px] leading-[1.6] text-[#fffdf8]/80">
                         {item.desc}
                       </span>
                     </span>
@@ -251,14 +243,14 @@ export const EcosystemTabsPreview: React.FC = () => {
           </ul>
         </motion.div>
 
-        {/* Right Column: Clean Interactive App Preview Surface */}
+        {/* Right Column: Cozy Warm Linen App Preview Surface */}
         <motion.div
           initial={{ opacity: 0, x: 28 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.65, delay: 0.1, ease: [0.2, 0.7, 0.2, 1] }}
         >
-          <div className="rounded-[22px] border border-[#ab8742]/28 bg-[#fffdfa] p-[28px] text-[#414b3b] shadow-[0_24px_70px_rgba(138,106,48,0.16)] max-[620px]:p-[22px]">
+          <div className="rounded-[22px] border border-[#ab8742]/35 bg-[#fffdf8] p-[28px] text-[#414b3b] shadow-[0_24px_70px_rgba(0,0,0,0.2)] max-[620px]:p-[22px]">
             <AnimatePresence mode="wait">
               {/* TAB 1: SCANNER & SWAPS */}
               {activeTab === 'scanner' && (
@@ -276,7 +268,7 @@ export const EcosystemTabsPreview: React.FC = () => {
                   <h3 className="mb-[6px] text-[20px] font-bold tracking-[-0.5px]">
                     Scanned coat scored 44%? Here is what lasts.
                   </h3>
-                  <p className="mb-[18px] text-[12.5px] leading-[1.65] text-[#6c6858]">
+                  <p className="mb-[18px] text-[12.5px] leading-[1.65] text-[#626759]">
                     When a piece uses weak viscose linings or PFC coatings, Nyloteum suggests alternatives matched to your profile, user wear logs, and brand trustability.
                   </p>
 
@@ -306,7 +298,7 @@ export const EcosystemTabsPreview: React.FC = () => {
                     ].map((alt) => (
                       <div
                         key={alt.name}
-                        className="rounded-[14px] border border-[#ab8742]/20 bg-[#fbf7ee] p-[14px]"
+                        className="rounded-[14px] border border-[#ab8742]/20 bg-[#faf6ee] p-[14px]"
                       >
                         <div className="flex items-start justify-between gap-2">
                           <div>
@@ -317,11 +309,11 @@ export const EcosystemTabsPreview: React.FC = () => {
                               {alt.brand}
                             </span>
                           </div>
-                          <span className="shrink-0 rounded-full bg-[#ab8742]/20 px-[9px] py-[4px] text-[10px] font-bold text-[#7d5f28]">
+                          <span className="shrink-0 rounded-full bg-[#8ca87b]/30 px-[9px] py-[4px] text-[10px] font-bold text-[#414b3b]">
                             {alt.match}
                           </span>
                         </div>
-                        <div className="mt-[8px] flex items-center justify-between border-t border-[#ab8742]/15 pt-[8px] text-[11px] text-[#6c6858]">
+                        <div className="mt-[8px] flex items-center justify-between border-t border-[#414b3b]/10 pt-[8px] text-[11px] text-[#626759]">
                           <span>{alt.blend}</span>
                           <strong className="text-[#414b3b]">{alt.price}</strong>
                         </div>
@@ -347,7 +339,7 @@ export const EcosystemTabsPreview: React.FC = () => {
                   <h3 className="mb-[6px] text-[20px] font-bold tracking-[-0.5px]">
                     Tap any tag icon to decode it
                   </h3>
-                  <p className="mb-[18px] text-[12.5px] leading-[1.65] text-[#6c6858]">
+                  <p className="mb-[18px] text-[12.5px] leading-[1.65] text-[#626759]">
                     Half of wardrobe damage happens in the laundry room. Select a symbol below to see what it protects.
                   </p>
 
@@ -361,8 +353,8 @@ export const EcosystemTabsPreview: React.FC = () => {
                           onClick={() => setSelectedIcon(ic.id)}
                           className={`grid h-[52px] cursor-pointer place-items-center rounded-[13px] border transition-all ${
                             isSel
-                              ? 'border-[#ab8742] bg-[#ab8742] text-[#fffdfa]'
-                              : 'border-[#ab8742]/22 bg-[#fbf7ee] text-[#414b3b] hover:border-[#ab8742]'
+                              ? 'border-[#414b3b] bg-[#414b3b] text-[#fffdf8]'
+                              : 'border-[#ab8742]/24 bg-[#faf6ee] text-[#414b3b] hover:border-[#ab8742]'
                           }`}
                           title={ic.title}
                         >
@@ -372,12 +364,12 @@ export const EcosystemTabsPreview: React.FC = () => {
                     })}
                   </div>
 
-                  <div className="mt-[16px] rounded-[16px] border border-[#ab8742]/25 bg-[#f3ead7] p-[18px]">
+                  <div className="mt-[16px] rounded-[16px] bg-[#8ca87b]/25 p-[18px]">
                     <div className="flex items-center justify-between gap-2">
                       <strong className="font-['Manrope'] text-[15px] font-bold text-[#414b3b]">
                         {currentIcon.title}
                       </strong>
-                      <span className="rounded-full bg-[#fffdfa] px-[10px] py-[4px] text-[10px] font-bold text-[#7d5f28]">
+                      <span className="rounded-full bg-[#fffdf8] px-[10px] py-[4px] text-[10px] font-bold text-[#85662c]">
                         {currentIcon.impact}
                       </span>
                     </div>
@@ -402,7 +394,7 @@ export const EcosystemTabsPreview: React.FC = () => {
                       <span className="dot" />
                       <span>Unit 1 · Fiber literacy trail</span>
                     </div>
-                    <span className="rounded-full bg-[#ab8742]/22 px-[10px] py-[4px] text-[10px] font-bold text-[#7d5f28]">
+                    <span className="rounded-full bg-[#ab8742]/20 px-[10px] py-[4px] text-[10px] font-bold text-[#85662c]">
                       7-day streak · 340 XP
                     </span>
                   </div>
@@ -422,20 +414,20 @@ export const EcosystemTabsPreview: React.FC = () => {
                         key={step.label}
                         className={`flex items-center justify-between rounded-[12px] border px-[13px] py-[10px] text-[12px] ${
                           step.state === 'done'
-                            ? 'border-[#ab8742]/20 bg-[#fbf7ee] text-[#414b3b]'
+                            ? 'border-[#414b3b]/12 bg-[#faf6ee] text-[#414b3b]'
                             : step.state === 'active'
-                            ? 'border-[#ab8742] bg-[#f3ead7] font-bold text-[#414b3b]'
-                            : 'border-[#ab8742]/14 bg-[#fbf7ee] text-[#6c6858]/75'
+                            ? 'border-[#ab8742] bg-[#8ca87b]/24 font-bold text-[#414b3b]'
+                            : 'border-[#414b3b]/10 bg-[#faf6ee] text-[#626759]/75'
                         }`}
                       >
                         <div className="flex items-center gap-[10px]">
                           <span
                             className={`grid h-[22px] w-[22px] place-items-center rounded-full text-[11px] font-bold ${
                               step.state === 'done'
-                                ? 'bg-[#8ca87b] text-[#fffdfa]'
+                                ? 'bg-[#8ca87b] text-[#fffdf8]'
                                 : step.state === 'active'
-                                ? 'bg-[#ab8742] text-[#fffdfa]'
-                                : 'bg-[#ab8742]/18 text-[#6c6858]'
+                                ? 'bg-[#ab8742] text-[#fffdf8]'
+                                : 'bg-[#414b3b]/12 text-[#626759]'
                             }`}
                           >
                             {step.state === 'done' && <Check className="h-3 w-3" />}
@@ -456,7 +448,7 @@ export const EcosystemTabsPreview: React.FC = () => {
                   </div>
 
                   {/* Quick Interactive Question */}
-                  <div className="mt-[15px] rounded-[14px] border border-[#ab8742]/22 bg-[#fbf7ee] p-[14px]">
+                  <div className="mt-[15px] rounded-[14px] border border-[#ab8742]/22 bg-[#faf6ee] p-[14px]">
                     <p className="mb-[9px] text-[11.5px] font-bold text-[#414b3b]">
                       Quick check: Which €130 sweater resists pilling for years?
                     </p>
@@ -467,7 +459,7 @@ export const EcosystemTabsPreview: React.FC = () => {
                         className={`cursor-pointer rounded-[10px] border p-[9px] text-left text-[11px] transition-colors ${
                           quizChoice === 'a'
                             ? 'border-[#ab8742] bg-[#ab8742]/20 text-[#414b3b]'
-                            : 'border-[#ab8742]/22 bg-[#fffdfa] text-[#414b3b] hover:border-[#ab8742]'
+                            : 'border-[#414b3b]/14 bg-[#fffdf8] text-[#414b3b] hover:border-[#ab8742]'
                         }`}
                       >
                         <strong>A:</strong> 52% Acrylic, 28% Nylon, 20% Alpaca
@@ -477,15 +469,15 @@ export const EcosystemTabsPreview: React.FC = () => {
                         onClick={() => setQuizChoice('b')}
                         className={`cursor-pointer rounded-[10px] border p-[9px] text-left text-[11px] transition-colors ${
                           quizChoice === 'b'
-                            ? 'border-[#414b3b] bg-[#8ca87b]/28 text-[#414b3b]'
-                            : 'border-[#ab8742]/22 bg-[#fffdfa] text-[#414b3b] hover:border-[#ab8742]'
+                            ? 'border-[#414b3b] bg-[#8ca87b]/30 text-[#414b3b]'
+                            : 'border-[#414b3b]/14 bg-[#fffdf8] text-[#414b3b] hover:border-[#ab8742]'
                         }`}
                       >
                         <strong>B:</strong> 100% 2-Ply Combed Merino Wool
                       </button>
                     </div>
                     {quizChoice && (
-                      <p className="mt-[9px] mb-0 text-[11px] leading-[1.55] text-[#6c6858]">
+                      <p className="mt-[9px] mb-0 text-[11px] leading-[1.55] text-[#626759]">
                         {quizChoice === 'b'
                           ? 'Correct — 2-ply long merino staples lock cleanly, while short acrylic migrates and fuzzes within weeks.'
                           : 'Watch out — blending 52% cheap acrylic with a touch of alpaca is a common margin trap that pills fast.'}
@@ -525,8 +517,8 @@ export const EcosystemTabsPreview: React.FC = () => {
                           }
                           className={`cursor-pointer rounded-full px-[10px] py-[4px] text-[10px] font-bold transition-colors ${
                             feedFilter === f.id
-                              ? 'bg-[#ab8742] text-[#fffdfa]'
-                              : 'bg-[#f3ead7] text-[#414b3b] hover:bg-[#ab8742]/25'
+                              ? 'bg-[#414b3b] text-[#fffdf8]'
+                              : 'bg-[#8ca87b]/25 text-[#414b3b] hover:bg-[#8ca87b]/38'
                           }`}
                         >
                           {f.label}
@@ -542,12 +534,12 @@ export const EcosystemTabsPreview: React.FC = () => {
                       return (
                         <div
                           key={post.id}
-                          className="rounded-[15px] border border-[#ab8742]/20 bg-[#fbf7ee] p-[14px]"
+                          className="rounded-[15px] border border-[#ab8742]/20 bg-[#faf6ee] p-[14px]"
                         >
                           <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center gap-[9px]">
                               <span
-                                className="grid h-[28px] w-[28px] place-items-center rounded-full text-[11px] font-bold text-[#fffdfa]"
+                                className="grid h-[28px] w-[28px] place-items-center rounded-full text-[11px] font-bold text-[#fffdf8]"
                                 style={{ background: post.tone }}
                               >
                                 {post.user[0]}
@@ -556,31 +548,31 @@ export const EcosystemTabsPreview: React.FC = () => {
                                 <strong className="block text-[12px] text-[#414b3b]">
                                   {post.user}
                                 </strong>
-                                <span className="text-[10px] text-[#6c6858]">
+                                <span className="text-[10px] text-[#626759]">
                                   {post.tag}
                                 </span>
                               </div>
                             </div>
-                            <span className="inline-flex items-center gap-1 rounded-full bg-[#ab8742]/20 px-[8px] py-[3px] text-[10px] font-bold text-[#7d5f28]">
+                            <span className="inline-flex items-center gap-1 rounded-full bg-[#ab8742]/20 px-[8px] py-[3px] text-[10px] font-bold text-[#85662c]">
                               <Star className="h-3 w-3 fill-[#ab8742] text-[#ab8742]" />
                               {post.stars}
                             </span>
                           </div>
 
-                          <div className="mt-[9px] rounded-[10px] border border-[#ab8742]/16 bg-[#fffdfa] px-[11px] py-[8px]">
+                          <div className="mt-[9px] rounded-[10px] border border-[#414b3b]/10 bg-[#fffdf8] px-[11px] py-[8px]">
                             <strong className="block text-[11.5px] text-[#414b3b]">
                               {post.piece}
                             </strong>
-                            <span className="text-[10px] font-medium text-[#6c6858]">
+                            <span className="text-[10px] font-medium text-[#626759]">
                               {post.blend}
                             </span>
                           </div>
 
-                          <p className="mt-[8px] mb-[9px] text-[11.5px] leading-[1.55] text-[#6c6858]">
+                          <p className="mt-[8px] mb-[9px] text-[11.5px] leading-[1.55] text-[#626759]">
                             {post.note}
                           </p>
 
-                          <div className="flex items-center justify-between border-t border-[#ab8742]/16 pt-[8px] text-[11px]">
+                          <div className="flex items-center justify-between border-t border-[#414b3b]/10 pt-[8px] text-[11px]">
                             <div className="flex items-center gap-[14px]">
                               <button
                                 type="button"
@@ -593,7 +585,7 @@ export const EcosystemTabsPreview: React.FC = () => {
                                   className={`h-3.5 w-3.5 ${
                                     isLiked
                                       ? 'fill-[#ab8742] text-[#ab8742]'
-                                      : 'text-[#6c6858]'
+                                      : 'text-[#626759]'
                                   }`}
                                 />
                                 {post.likes + (isLiked ? 1 : 0)}
@@ -606,19 +598,19 @@ export const EcosystemTabsPreview: React.FC = () => {
                                     [post.id]: !prev[post.id],
                                   }))
                                 }
-                                className="inline-flex cursor-pointer items-center gap-1 font-semibold text-[#6c6858] hover:text-[#ab8742]"
+                                className="inline-flex cursor-pointer items-center gap-1 font-semibold text-[#626759] hover:text-[#414b3b]"
                               >
                                 <MessageCircle className="h-3.5 w-3.5" />
                                 Comment
                               </button>
                             </div>
-                            <span className="text-[10px] font-semibold text-[#927134]">
+                            <span className="text-[10px] font-semibold text-[#414b3b]">
                               Improves AI match
                             </span>
                           </div>
 
                           {isOpen && (
-                            <p className="mt-[7px] mb-0 rounded-[8px] bg-[#f3ead7] px-[10px] py-[6px] text-[10.5px] text-[#414b3b]">
+                            <p className="mt-[7px] mb-0 rounded-[8px] bg-[#8ca87b]/22 px-[10px] py-[6px] text-[10.5px] text-[#414b3b]">
                               {post.comment}
                             </p>
                           )}
