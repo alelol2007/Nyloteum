@@ -17,7 +17,7 @@ export const NyloteumLogo: React.FC<NyloteumLogoProps> = ({
   return (
     <span className={`inline-flex items-center select-none ${className}`}>
       <img
-        src="/nyloteum-logo.png"
+        src="/nyloteum-logo.png?v=2"
         alt="Nyloteum"
         className={`${sizeClasses} w-auto object-contain`}
       />
